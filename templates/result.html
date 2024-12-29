@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Loan Approval Prediction Result</h1>
+        <div class="text-center mt-4">
+            <!-- Dynamically display the appropriate image -->
+            {% if result == "Approved" %}
+                <img src="https://www.piramalaranya.com/wp-content/uploads/2023/03/What-to-Expect-During-the-Home-Loan-Approval-Process-.png" 
+                     alt="Loan Approved" 
+                     class="img-fluid" 
+                     style="max-width: 500px;">
+                <h3 class="text-success mt-3">Congratulations! Your loan is Approved.</h3>
+            {% else %}
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlzVFOGuY8eVznMUc2DxzkoNbUE-T-MQhLcw&s" 
+                     alt="Loan Not Approved" 
+                     class="img-fluid" 
+                     style="max-width: 500px;">
+                <h3 class="text-danger mt-3">Sorry, your loan is Not Approved.</h3>
+            {% endif %}
+        </div>
+        <div class="text-center mt-4">
+            <a href="/" class="btn btn-secondary">Back to Form</a>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.min.js"></script>
+</body>
+</html>
